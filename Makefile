@@ -5,7 +5,7 @@ RM := rm -f
 
 all: $(maindoc).pdf
 
-$(maindoc).pdf: $(maindoc).tex
+$(maindoc).pdf: $(maindoc).tex address.tex telephone.tex
 	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" $<
 pvc: $(maindoc).pdf
 	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $<)" $< --pvc
@@ -21,3 +21,8 @@ Clean: clean
 	@$(RM) $(maindoc).pdf
 
 .PHONY: all pvc clean Clean
+
+address.tex:
+	echo "REDACTED" > $@
+telephone.tex:
+	echo "REDACTED" > $@

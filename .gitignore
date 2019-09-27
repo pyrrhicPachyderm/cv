@@ -240,3 +240,7 @@ TSWLatexianTemp*
 
 # generated if using elsarticle.cls
 *.
+
+# these files contain sensitive information that I'm not putting on GitHub
+address.tex
+telephone.tex
