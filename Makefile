@@ -7,8 +7,6 @@ all: $(maindoc).pdf
 
 $(maindoc).pdf: $(maindoc).tex address.tex telephone.tex
 	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" $<
-pvc: $(maindoc).pdf
-	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $<)" $< --pvc
 clean:
 	@latexmk $(LATEXMK_FLAGS) -c -silent
 	@(\
@@ -20,7 +18,7 @@ clean:
 Clean: clean
 	@$(RM) $(maindoc).pdf
 
-.PHONY: all pvc clean Clean
+.PHONY: all clean Clean
 
 address.tex:
 	echo "REDACTED" > $@
