@@ -15,10 +15,9 @@ clean:
 		$(RM) **/*.dep **/*.dpth **/*.log **/*.md5 **/*-figure*.pdf;\
 		$(RM) **/*-cropped.pdf;\
 	)
-Clean: clean
 	@$(RM) $(maindoc).pdf
 
-.PHONY: all clean Clean
+.PHONY: all clean
 
 address.tex:
 	echo "REDACTED" > $@
