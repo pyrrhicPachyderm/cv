@@ -1,11 +1,17 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage{enumerate}
-\usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{verbatim}
 \usepackage{csquotes}
 \usepackage[margin=0.7in]{geometry}
 \usepackage{texlogos}% provides the C++ logo as \cpluspluslogo
+\usepackage{import}
+\usepackage{hyperref}
+
+%References
+\import{reference-styles/}{ecology.tex}
+\ExecuteBibliographyOptions{doi=true}
+\addbibresource{bibliography/references.bib}
 
 \hypersetup{colorlinks=true,urlcolor=blue}
 
