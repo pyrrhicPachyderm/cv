@@ -5,7 +5,7 @@ RM := rm -f
 
 all: $(maindoc).pdf
 
-supporting_tex_files := address.tex telephone.tex bibliography/references.bib reference-styles/ecology.tex reference-styles/authoryear.tex reference-styles/patches.tex
+supporting_tex_files := address.tex telephone.tex bibliography/references.bib reference-styles/cv.tex reference-styles/patches.tex
 
 $(maindoc).pdf: $(maindoc).tex $(supporting_tex_files)
 	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" $<
