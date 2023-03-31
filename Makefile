@@ -19,6 +19,12 @@ clean:
 
 .PHONY: all clean
 
+spellcheck: $(maindoc).tex
+	@for file in $^; do \
+		aspell check --per-conf=./aspell.conf "$$file" ;\
+	done
+.PHONY: spellcheck
+
 address.tex:
 	echo "REDACTED" > $@
 telephone.tex:
